@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<any>) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
@@ -40,9 +40,9 @@ const Contact: React.FC = () => {
                 email: "",
                 message: "",
               })
-          }, (erros:any)=>{
+          }, (errors:any)=>{
             setLoading(false);
-            console.log(error);
+            console.log(errors);
             alert("Something went wrong");
           })
   };

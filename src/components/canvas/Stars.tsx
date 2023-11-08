@@ -12,6 +12,7 @@ const Stars: React.FC = (props) => {
   });
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
+      {/* @ts-ignore */}
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
